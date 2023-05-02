@@ -4,7 +4,7 @@ const desktopMenu = document.querySelector('.desktop-menu')
 const burguerIcon = document.querySelector('.menu')
 const mobileMenu = document.querySelector('.mobile-menu')
 const cartIcon = document.querySelector('.navbar-shopping-cart')
-const cartList = document.querySelector('.product-detail')
+const cartList = document.querySelector('#shoppingCartContainer')
 const cardsContainer = document.querySelector('.cards-container')
 const productList = []
 
