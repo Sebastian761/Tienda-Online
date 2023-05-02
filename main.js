@@ -7,6 +7,7 @@ const cartList = document.querySelector('#shoppingCartContainer')
 const cardsContainer = document.querySelector('.cards-container')
 const productDetail = document.querySelector('#product-detail')
 const closeButton = document.querySelector('.product-detail-close')
+const mainContainer = document.querySelector('main')
 
 const productList = []
 
@@ -16,29 +17,29 @@ productList.push({
     image: '"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">'
 })
 productList.push({ 
-    name: "bike",
-    price: 120,
-    image: '"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">'
+    name: "Computer",
+    price: 2210,
+    image: '"https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">'
 })
 productList.push({ 
-    name: "bike",
-    price: 120,
-    image: '"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">'
+    name: "Gloves",
+    price: 80,
+    image: '"https://images.pexels.com/photos/45057/pexels-photo-45057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">'
 })
 productList.push({ 
-    name: "bike",
-    price: 120,
-    image: '"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">'
+    name: "Laptop",
+    price: 1960,
+    image: '"https://images.pexels.com/photos/6446709/pexels-photo-6446709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">'
 })
 productList.push({ 
-    name: "bike",
-    price: 120,
-    image: '"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">'
+    name: "Smartphone",
+    price: 650,
+    image: '"https://images.pexels.com/photos/3999536/pexels-photo-3999536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">'
 })
 productList.push({ 
-    name: "bike",
-    price: 120,
-    image: '"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">'
+    name: "Glasses",
+    price: 150,
+    image: '"https://images.pexels.com/photos/947885/pexels-photo-947885.jpeg?auto=compress&cs=tinysrgb&w=1600">'
 })
 
 const renderProducts = (arr) => {
@@ -91,10 +92,12 @@ function openProductDetail() {
         cartList.classList.add('hidden')
         desktopMenu.classList.add('hidden') 
         mobileMenu.classList.add('hidden')
+        mainContainer.classList.add('blur')
 }
 
 function closeProductDetail() {
     productDetail.classList.add('hidden')
+    mainContainer.classList.remove('blur')
 }
 
 const productImage = document.querySelectorAll('.card-img')
